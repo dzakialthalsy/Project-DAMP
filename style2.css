@@ -1,0 +1,276 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    font-family: Arial, sans-serif;
+    margin: 0px 0 0 0;
+}
+
+.navbar-mangujo {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    background-color: grey;
+    padding: 10px 20px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
+}
+
+.navbar-mangujo .logo {
+    position: absolute;
+    left: 70px;
+}
+.navbar-mangujo .logo img{
+    width: 150px;
+}
+.navbar-mangujo .menu {
+    display: flex;
+    list-style: none;
+}
+
+.navbar-mangujo .menu li {
+    margin: 10px 20px;
+}
+.navbar-mangujo .menu li a {
+    color: #393E46;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #393E46;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.bio {
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bio-container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.bio-photo {
+    display: flex;
+    justify-content: center;
+}
+
+.bio-photo img {
+    width: 350px;
+    height: auto;
+}
+
+.bio-isi {
+    text-align: justify;
+    font-size: 18px;
+    color: #393E46;
+    word-spacing: 4px;
+    line-height: 1.5;
+    padding: 0 10px;
+}
+
+.footer-mangujo {
+    background-color:rgb(41, 7, 63);
+    color: white;
+    padding: 40px 20px;
+    font-family: 'Arial', sans-serif;
+    border-top: 4px solid #5c0099;
+}
+
+.footer-mangujo-logo img{
+    width: 120px;
+}
+
+.footer-mangujo-logo {
+    display: flex;
+    align-items: center;
+}
+
+.footer-mangujo-content {
+    display: flex;
+    justify-content: flex-start; 
+    gap: 30px; 
+}
+
+.footer-mangujo-section.address h2 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+    background: linear-gradient(to bottom,rgb(242, 192, 240),rgb(195, 106, 186),  #fdca55,  #fdca55,  #fdca55);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.footer-mangujo-section.address p {
+    margin: 5px 0;
+    font-size: 1em;
+    color: #ecf0f1;
+}
+
+.footer-mangujo-section.legal  {
+    position: absolute;
+    right: 20px;
+}
+.footer-mangujo-section.legal p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #bdc3c7;
+}
+
+@media (min-width: 576px) {
+    .bio-container {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 991px) {
+    .navbar-mangujo {
+        padding: 10px 15px;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+    }
+
+    .navbar-mangujo .logo {
+        position: static;
+        left: auto;
+        flex-shrink: 0;
+    }
+    .navbar-mangujo .logo img {
+        width: 120px;
+    }
+    
+    .navbar-right-cluster {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .hamburger {
+        display: block;
+        order: 2;
+    }
+
+    .navbar-mangujo .menu {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 15px;
+        width: 200px;
+        background-color: rgba(255, 255, 255, 0.95);
+        backdrop-filter: blur(10px);
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 10px 0;
+        border-radius: 8px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .navbar-mangujo .menu.active {
+        display: flex; 
+    }
+
+    .navbar-mangujo .menu li {
+        margin: 15px 0;
+    }
+
+    .bio-container {
+        max-width: 540px;
+        margin: 0 auto;
+    }
+
+    .footer-mangujo-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        text-align: center;
+    }
+
+    .footer-mangujo-section.legal {
+        position: static;
+        margin-top: 15px;
+        order: 3;
+    }
+    
+    .footer-mangujo-section.address {
+        order: 2;
+    }
+    .footer-mangujo-logo {
+        order: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .bio {
+        height: 100vh;
+        padding: 0 150px;
+    }
+
+    .bio-container {
+        max-width: 960px;
+        flex-direction: row;
+        text-align: left;
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .bio-photo {
+        flex: 1;
+        text-align: center;
+    }
+
+    .bio-photo img {
+        width: 350px;
+    }
+
+    .bio-isi {
+        flex: 2;
+        padding: 0 20px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .home-photo img {
+        width: 100vw;
+        height: 100vh;
+    }
+
+    .bio-container {
+        max-width: 1140px;
+    }
+
+    .bio-photo img {
+        width: 350px;
+    }
+
+    .bio-isi {
+        font-size: 20px;
+    }
+}
+
