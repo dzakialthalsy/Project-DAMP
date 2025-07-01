@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mang Ujo</title>
-        <link rel="stylesheet" href="style2.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Visualisasi Lahan Parkir UB</title>
+  <link href="style2.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     </head>
     <body>
         <header>
@@ -26,13 +27,106 @@
         </header>
 
         <main>
-            <section id="bio" class="bio">
-                <div class="bio-container">
-                    <div class="bio-isi">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, doloremque! Nostrum quos repellat temporibus ullam aut et consequuntur illo in magnam incidunt praesentium commodi, accusantium eius labore consectetur dolorem officiis dicta modi cupiditate asperiores exercitationem. Fugiat assumenda quaerat error ex vel dicta aliquid. Tempore atque in debitis ipsam non tempora culpa, recusandae ut magni quis molestias nemo eum beatae assumenda voluptatem iusto doloribus distinctio dignissimos asperiores reiciendis ipsum laborum consectetur sapiente voluptate? Quo error quia aspernatur aliquid amet velit consequatur natus, earum nostrum quis mollitia! Corporis adipisci alias temporibus nam voluptatibus pariatur et maxime quae dolorum iure harum, fugiat officiis cumque corrupti minus labore dolore molestias? Incidunt cupiditate, assumenda velit voluptatem laborum doloremque dolores accusantium porro voluptate delectus id error laboriosam ab nemo nisi iste iusto sed eius qui laudantium. Temporibus facilis aspernatur sequi assumenda laborum alias soluta exercitationem, necessitatibus expedita maiores voluptatibus adipisci ipsa, provident, ad at dolores officia ratione cumque nihil. Aliquid sapiente, reiciendis placeat repellat quaerat magnam ipsa ipsam sed. Nam, dolores minima repellendus quasi vitae, sint atque architecto omnis pariatur voluptatibus odio laboriosam commodi, modi odit. Sed quis cum ut dolore! Rem, vero? Veritatis repudiandae quidem explicabo labore exercitationem magnam! Autem architecto vitae sapiente sunt veniam sint vero repudiandae, cum praesentium natus dolor expedita eligendi provident dicta pariatur. Consequatur soluta reiciendis eaque vel ut voluptates repudiandae ex! Libero, illo odio! Tenetur fuga deleniti est quidem dicta rem quo suscipit nam, doloribus, neque repellendus veritatis voluptas sint sapiente. Aperiam placeat fugit eos distinctio! Corrupti soluta at, itaque esse accusantium atque numquam explicabo asperiores optio nesciunt, ratione necessitatibus, nobis tempore molestiae harum ut molestias aliquid delectus libero voluptatibus minus inventore veniam? Architecto veritatis explicabo, adipisci animi numquam assumenda sequi amet rerum voluptatum accusantium dignissimos aliquid repellat aspernatur. Ratione libero similique dolore voluptatem facere hic excepturi eius unde placeat!</p>
+              <!-- Main Content -->
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-12">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4490541065493!2d112.61110207432519!3d-7.952459679232132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78827f2d620975%3A0xf19b7459bbee5ed5!2sUniversitas%20Brawijaya!5e0!3m2!1sid!2sid!4v1751377263289!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
-            </section>
+    
+
+                <div class="row mt-3">
+                    <div class="col-md-4 col-12 mb-3">
+                        <label for="dropdownFakultas" class="form-label">Pilih Fakultas</label>
+                        <select class="form-select" id="dropdownFakultas">
+                            <option value="">Semua Fakultas</option>
+                            <option value="FILKOM">FILKOM</option>
+                            <option value="FMPIA">FMIPA</option>
+                            <option value="FIB">FIB</option>
+                            <option value="FTP">FTP</option>
+                            <option value="FT">FT</option>
+                            <option value="FIA">FIA</option>
+                            <option value="FV">FV</option>
+                            <option value="FPIK">FPIK</option>
+                            <option value="FEB">FEB</option>
+                            <option value="FH">FH</option>
+                        </select>
+                    </div>
+                    <div class="col-md-8 col-12">
+                        <label class="form-label">Estimasi Waktu</label>
+                    <div id="estimasiWaktu" class="mt-1">
+                        <p class="text-muted fst-italic">Silakan pilih fakultas untuk melihat estimasi waktu parkir kosong & waktu keberangkatan ideal.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Simulasi Lahan -->
+            <div class="row mt-4" id="parkirList">
+                <div class="col-md-6 col-12 mb-3 parkir-item kuning" data-fakultas="FILKOM">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Parkir BNI (FILKOM)</h5>
+                            <p class="card-text">Status: <span class="status-indikator status-kuning"></span> Hampir Penuh</p>
+                            <p class="card-text">Slot Tersedia: 8 / 30</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mb-3 parkir-item hijau" data-fakultas="FILKOM">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Parkir Edutech (FILKOM)</h5>
+                            <p class="card-text">Status: <span class="status-indikator status-hijau"></span> Tersedia</p>
+                            <p class="card-text">Slot Tersedia: 25 / 40</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mb-3 parkir-item hijau" data-fakultas="FIB">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Parkir Gedung B (FIB)</h5>
+                            <p class="card-text">Status: <span class="status-indikator status-hijau"></span> Tersedia</p>
+                            <p class="card-text">Slot Tersedia: 22 / 30</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mb-3 parkir-item merah" data-fakultas="FIB">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Parkir Gedung A (FIB)</h5>
+                            <p class="card-text">Status: <span class="status-indikator status-merah"></span> Penuh</p>
+                            <p class="card-text">Slot Tersedia: 0 / 20</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mb-3 parkir-item kuning" data-fakultas="FEB">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Parkir Utama (FEB)</h5>
+                            <p class="card-text">Status: <span class="status-indikator status-kuning"></span> Hampir Penuh</p>
+                            <p class="card-text">Slot Tersedia: 10 / 35</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mb-3 parkir-item merah" data-fakultas="FEB">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Parkir Timur (FEB)</h5>
+                            <p class="card-text">Status: <span class="status-indikator status-merah"></span> Penuh</p>
+                            <p class="card-text">Slot Tersedia: 0 / 25</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-12 mb-3 parkir-item hijau" data-fakultas="FT">
+                    <div class="card h-100">
+                        <div class="card-body">
+                            <h5 class="card-title">Parkir Teknik Industri (FT)</h5>
+                            <p class="card-text">Status: <span class="status-indikator status-hijau"></span> Tersedia</p>
+                            <p class="card-text">Slot Tersedia: 18 / 25</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </main>
 
         <div class="footer-mangujo">
