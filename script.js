@@ -3,6 +3,7 @@ function toggleMenu() {
     menu.classList.toggle("active");
 
 }
+window.toggleMenu = toggleMenu;
 
 // Inisialisasi Google Maps
 function initMap() {
@@ -69,7 +70,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (estimasiEl) {
         if (selected === "") {
-          estimasiEl.innerHTML = <p class="text-muted fst-italic">Silakan pilih fakultas untuk melihat estimasi waktu parkir kosong & waktu keberangkatan ideal.</p>;
+          estimasiEl.innerHTML = `<p class="text-muted fst-italic">Silakan pilih fakultas untuk melihat estimasi waktu parkir kosong & waktu keberangkatan ideal.</p>`;
         } else if (estimasiData[selected]) {
           const data = estimasiData[selected];
           estimasiEl.innerHTML = `
@@ -79,7 +80,7 @@ document.addEventListener("DOMContentLoaded", function () {
             </ul>
           `;
         } else {
-          estimasiEl.innerHTML = <p class="text-warning">Belum ada data estimasi untuk fakultas ini.</p>;
+          estimasiEl.innerHTML = `<p class="text-warning">Belum ada data estimasi untuk fakultas ini.</p>`;
         }
       }
     });

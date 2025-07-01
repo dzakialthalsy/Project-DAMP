@@ -28,105 +28,107 @@
 
         <main>
               <!-- Main Content -->
-            <div class="container mt-4">
-                <div class="row">
-                    <div class="col-12">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4490541065493!2d112.61110207432519!3d-7.952459679232132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78827f2d620975%3A0xf19b7459bbee5ed5!2sUniversitas%20Brawijaya!5e0!3m2!1sid!2sid!4v1751377263289!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <section id="bio" class="bio">
+                <div class="container mt-4">
+                    <div class="row">
+                        <div class="col-12">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.4490541065493!2d112.61110207432519!3d-7.952459679232132!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78827f2d620975%3A0xf19b7459bbee5ed5!2sUniversitas%20Brawijaya!5e0!3m2!1sid!2sid!4v1751377263289!5m2!1sid!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                     </div>
-                </div>
-    
+        
 
-                <div class="row mt-3">
-                    <div class="col-md-4 col-12 mb-3">
-                        <label for="dropdownFakultas" class="form-label">Pilih Fakultas</label>
-                        <select class="form-select" id="dropdownFakultas">
-                            <option value="">Semua Fakultas</option>
-                            <option value="FILKOM">FILKOM</option>
-                            <option value="FMPIA">FMIPA</option>
-                            <option value="FIB">FIB</option>
-                            <option value="FTP">FTP</option>
-                            <option value="FT">FT</option>
-                            <option value="FIA">FIA</option>
-                            <option value="FV">FV</option>
-                            <option value="FPIK">FPIK</option>
-                            <option value="FEB">FEB</option>
-                            <option value="FH">FH</option>
-                        </select>
-                    </div>
-                    <div class="col-md-8 col-12">
-                        <label class="form-label">Estimasi Waktu</label>
-                    <div id="estimasiWaktu" class="mt-1">
-                        <p class="text-muted fst-italic">Silakan pilih fakultas untuk melihat estimasi waktu parkir kosong & waktu keberangkatan ideal.</p>
+                    <div class="row mt-3">
+                        <div class="col-md-4 col-12 mb-3">
+                            <label for="dropdownFakultas" class="form-label">Pilih Fakultas</label>
+                            <select class="form-select" id="dropdownFakultas">
+                                <option value="">Semua Fakultas</option>
+                                <option value="FILKOM">FILKOM</option>
+                                <option value="FMPIA">FMIPA</option>
+                                <option value="FIB">FIB</option>
+                                <option value="FTP">FTP</option>
+                                <option value="FT">FT</option>
+                                <option value="FIA">FIA</option>
+                                <option value="FV">FV</option>
+                                <option value="FPIK">FPIK</option>
+                                <option value="FEB">FEB</option>
+                                <option value="FH">FH</option>
+                            </select>
+                        </div>
+                        <div class="col-md-8 col-12">
+                            <label class="form-label">Estimasi Waktu</label>
+                        <div id="estimasiWaktu" class="mt-1">
+                            <p class="text-muted fst-italic">Silakan pilih fakultas untuk melihat estimasi waktu parkir kosong & waktu keberangkatan ideal.</p>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <!-- Simulasi Lahan -->
-            <div class="row mt-4" id="parkirList">
-                <div class="col-md-6 col-12 mb-3 parkir-item kuning" data-fakultas="FILKOM">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Parkir BNI (FILKOM)</h5>
-                            <p class="card-text">Status: <span class="status-indikator status-kuning"></span> Hampir Penuh</p>
-                            <p class="card-text">Slot Tersedia: 8 / 30</p>
+                <!-- Simulasi Lahan -->
+                <div class="row mt-4" id="parkirList">
+                    <div class="col-md-6 col-12 mb-3 parkir-item kuning" data-fakultas="FILKOM">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Parkir BNI (FILKOM)</h5>
+                                <p class="card-text">Status: <span class="status-indikator status-kuning"></span> Hampir Penuh</p>
+                                <p class="card-text">Slot Tersedia: 8 / 30</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 mb-3 parkir-item hijau" data-fakultas="FILKOM">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Parkir Edutech (FILKOM)</h5>
+                                <p class="card-text">Status: <span class="status-indikator status-hijau"></span> Tersedia</p>
+                                <p class="card-text">Slot Tersedia: 25 / 40</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 mb-3 parkir-item hijau" data-fakultas="FIB">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Parkir Gedung B (FIB)</h5>
+                                <p class="card-text">Status: <span class="status-indikator status-hijau"></span> Tersedia</p>
+                                <p class="card-text">Slot Tersedia: 22 / 30</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 mb-3 parkir-item merah" data-fakultas="FIB">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Parkir Gedung A (FIB)</h5>
+                                <p class="card-text">Status: <span class="status-indikator status-merah"></span> Penuh</p>
+                                <p class="card-text">Slot Tersedia: 0 / 20</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 mb-3 parkir-item kuning" data-fakultas="FEB">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Parkir Utama (FEB)</h5>
+                                <p class="card-text">Status: <span class="status-indikator status-kuning"></span> Hampir Penuh</p>
+                                <p class="card-text">Slot Tersedia: 10 / 35</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 mb-3 parkir-item merah" data-fakultas="FEB">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Parkir Timur (FEB)</h5>
+                                <p class="card-text">Status: <span class="status-indikator status-merah"></span> Penuh</p>
+                                <p class="card-text">Slot Tersedia: 0 / 25</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12 mb-3 parkir-item hijau" data-fakultas="FT">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Parkir Teknik Industri (FT)</h5>
+                                <p class="card-text">Status: <span class="status-indikator status-hijau"></span> Tersedia</p>
+                                <p class="card-text">Slot Tersedia: 18 / 25</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-12 mb-3 parkir-item hijau" data-fakultas="FILKOM">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Parkir Edutech (FILKOM)</h5>
-                            <p class="card-text">Status: <span class="status-indikator status-hijau"></span> Tersedia</p>
-                            <p class="card-text">Slot Tersedia: 25 / 40</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-12 mb-3 parkir-item hijau" data-fakultas="FIB">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Parkir Gedung B (FIB)</h5>
-                            <p class="card-text">Status: <span class="status-indikator status-hijau"></span> Tersedia</p>
-                            <p class="card-text">Slot Tersedia: 22 / 30</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-12 mb-3 parkir-item merah" data-fakultas="FIB">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Parkir Gedung A (FIB)</h5>
-                            <p class="card-text">Status: <span class="status-indikator status-merah"></span> Penuh</p>
-                            <p class="card-text">Slot Tersedia: 0 / 20</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-12 mb-3 parkir-item kuning" data-fakultas="FEB">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Parkir Utama (FEB)</h5>
-                            <p class="card-text">Status: <span class="status-indikator status-kuning"></span> Hampir Penuh</p>
-                            <p class="card-text">Slot Tersedia: 10 / 35</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-12 mb-3 parkir-item merah" data-fakultas="FEB">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Parkir Timur (FEB)</h5>
-                            <p class="card-text">Status: <span class="status-indikator status-merah"></span> Penuh</p>
-                            <p class="card-text">Slot Tersedia: 0 / 25</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-12 mb-3 parkir-item hijau" data-fakultas="FT">
-                    <div class="card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Parkir Teknik Industri (FT)</h5>
-                            <p class="card-text">Status: <span class="status-indikator status-hijau"></span> Tersedia</p>
-                            <p class="card-text">Slot Tersedia: 18 / 25</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            </section>
         </main>
 
         <div class="footer-mangujo">
