@@ -9,6 +9,7 @@ html {
 body {
     font-family: Arial, sans-serif;
     margin: 0px 0 0 0;
+    background-color: #f8f9fa;    
 }
 
 .navbar-mangujo {
@@ -95,6 +96,26 @@ section {
     padding: 0 10px;
 }
 
+.status-indikator {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 6px;
+}
+.status-hijau { background-color: green; }
+.status-kuning { background-color: yellow; }
+.status-merah { background-color: red; }
+.card {
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+.map-container {
+    height: 400px;
+    width: 100%; /* tetap */
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
 .footer-mangujo {
     background-color:rgb(41, 7, 63);
     color: white;
@@ -146,6 +167,12 @@ section {
     .bio-container {
         max-width: 540px;
         margin: 0 auto;
+    }
+    .form-label, .card-title, .card-text { font-size: 0.9rem; }
+    .status-indikator {
+        width: 14px;
+        height: 14px;
+        margin-right: 4px;
     }
 }
 
