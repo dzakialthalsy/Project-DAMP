@@ -162,7 +162,21 @@ section {
     font-size: 0.9em;
     color: #bdc3c7;
 }
+/* Aturan dasar untuk iframe */
+.map-iframe {
+    width: 100%; /* Default: lebar 100% untuk semua ukuran layar */
+    border: 0;
+    border-radius: 10px;
+    border: 1px solid #dee2e6;
+}
 
+/* Media query untuk tampilan mobile */
+@media (max-width: 425px) { /* Mengatur lebar untuk layar dengan lebar maksimum 425px */
+    .map-iframe {
+        width: 100%; /* Atur lebar sesuai kebutuhan Anda, misalnya 100% atau 300px */
+        /* Anda bisa mengatur nilai width apa pun di sini, misalnya 300px atau 90vw */
+    }
+}
 @media (min-width: 576px) {
     .bio-container {
         max-width: 540px;
@@ -255,7 +269,7 @@ section {
 
 @media (min-width: 992px) {
     .bio {
-        height: 165vh;
+        height: 186vh;
         padding: 0 150px;
     }
 
